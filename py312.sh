@@ -6,5 +6,7 @@ wget https://www.python.org/ftp/python/3.12.0/Python-3.12.0.tgz && tar zxvf Pyth
 make&& make install
 cd ..
 rm -rf Python-3.12.0 Python-3.12.0.tgz
-rm -rf  /usr/bin/python
+rm -rf /usr/bin/python3
+rm -rf /usr/bin/pip3
+rm -rf /usr/bin/python
 ln -s /usr/bin/python3.12 /usr/bin/python
