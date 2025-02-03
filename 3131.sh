@@ -1,7 +1,10 @@
 #!/bin/sh
-sudo apt-get update && apt upgrade -y
-sudo apt-get install -y python-is-python3 python3-pip supervisor libreadline-dev libc6-dev libffi-dev build-essential tk-dev libncurses5-dev libncursesw5-dev libreadline6-dev libdb5.3-dev libgdbm-dev libsqlite3-dev libssl-dev libbz2-dev libexpat1-dev liblzma-dev zlib1g-dev
+sudo apt-get update
+sudo apt-get upgrade
+sudo apt-get install -y make build-essential libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev libncursesw5-dev xz-utils tk-dev liblzma-dev tk-dev
 wget https://www.python.org/ftp/python/3.13.1/Python-3.13.1.tgz && tar -xf Python-3.13.1.tgz && cd Python-3.13.1
-./configure --enable-optimizations
-make -j 2 && make altinstall
+sudo ./configure --prefix=/usr/local/python-3.13 --enable-optimizations --with-lto --with-computed-gotos --with-system-ffi --enable-shared
+sudo make -j "$(nproc)"
+sudo ./python3.13 -m test -j "$(nproc)"
+sudo make altinstall
 sudo ln -sf /usr/local/bin/python3.13 /usr/bin/python
