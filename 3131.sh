@@ -8,3 +8,5 @@ sudo make -j "$(nproc)"
 sudo ./python3.13 -m test -j "$(nproc)"
 sudo make install
 # sudo make altinstall
+# sudo ln -sf /usr/local/bin/python3.13 /usr/bin/python
+# sudo ln -sf /usr/local/bin/python3.13 /usr/bin/python3
