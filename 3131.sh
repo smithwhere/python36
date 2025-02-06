@@ -6,6 +6,4 @@ wget https://www.python.org/ftp/python/3.13.1/Python-3.13.1.tgz && tar -xf Pytho
 sudo ./configure --prefix=/usr/local/python-3.13 --enable-optimizations --with-lto --with-computed-gotos --with-system-ffi --enable-shared
 sudo make -j "$(nproc)"
 sudo ./python3.13 -m test -j "$(nproc)"
-sudo make altinstall
-sudo ln -sf /usr/local/bin/python3.13 /usr/bin/python
-sudo ln -sf /usr/local/bin/python3.13 /usr/bin/python3
+sudo make install
