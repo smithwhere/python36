@@ -7,3 +7,4 @@ sudo ./configure --prefix=/usr/local/python-3.13 --enable-optimizations --with-l
 sudo make -j "$(nproc)"
 sudo ./python3.13 -m test -j "$(nproc)"
 sudo make install
+#sudo make altinstall
