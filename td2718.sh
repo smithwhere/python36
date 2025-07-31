@@ -5,3 +5,4 @@ sudo apt-get install -y build-essential zlib1g-dev libncurses5-dev libreadline-d
 ./configure
 make && make install
 cd ..
+rm -rf Python-2.7.18.tgz
