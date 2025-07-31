@@ -5,4 +5,3 @@ wget https://www.python.org/ftp/python/2.7.18/Python-2.7.18.tgz && tar zxvf Pyth
 ./configure
 make && make install
 cd ..
-rm -rf Python-2.7.18 Python-2.7.18.tgz
