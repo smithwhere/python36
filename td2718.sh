@@ -6,4 +6,3 @@ wget https://github.com/smithwhere/python36/releases/download/Python-2.7.18/Pyth
 make -j$(nproc) && sudo make install
 cd ..
 rm -rf Python-2.7.18.tgz
-python --version
